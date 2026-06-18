@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Note</title>
+</head>
+<body>
+    <h1>Delete Note</h1>
+
+    <p>Are you sure you want to delete:</p>
+
+    <h2>{{ not.title }}</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <Button type="submit">Yes Delete</Button>
+
+    </form>
+    <a href="{% url 'dashboard' %}">Cancel</a>
+</body>
+</html>
