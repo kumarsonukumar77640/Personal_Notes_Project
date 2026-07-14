@@ -26,9 +26,10 @@ SECRET_KEY = 'django-insecure-=la@i!6rhi9n)1f+afi!7=x#yvdlb$ma79-gyxrcw9*xflm)kh
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    "personal-notes-project-1.onrender.com",
     "127.0.0.1",
     "localhost",
-    "notes.onrender.com"
+    
 ]
 
 
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'notes',
 ]
 
