@@ -1,23 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delete Note</title>
-</head>
-<body>
-    <h1>Delete Note</h1>
 
-    <p>Are you sure you want to delete:</p>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card shadow p-5">
+        <h2 class="mb-4">Delete Note</h2>
 
-    <h2>{{ not.title }}</h2>
+        <p>Are you sure you want to delete:
+            <strong>
+                {{ note.title }}
+            </strong>
 
-    <form method="post">
-        {% csrf_token %}
+        </p>
 
-        <Button type="submit">Yes Delete</Button>
+        
 
-    </form>
-    <a href="{% url 'dashboard' %}">Cancel</a>
-</body>
+        <form method="post">
+          {% csrf_token %}
+
+          <button type="submit" class="btn btn-danger">Yes Delete</button>
+          <a href="{% url 'dashboard' %}" class="btn btn-secondary">Back</a>
+        </form>
+        
+      </div>
+    </div>
+  </body>
 </html>
