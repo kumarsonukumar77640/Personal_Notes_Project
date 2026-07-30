@@ -59,12 +59,7 @@ def add_note(request):
     return render(request, 'notes/add_note.html', {'form':form})    
 
 
-@login_required(login_url='login')
-def note_detail(request, id):
 
-    note = Note.objects.get(id = id, user=request.user)
-
-    return render(request, 'notes/note_detail.html', {'note':note})
 
 
 
